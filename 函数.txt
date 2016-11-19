@@ -1,0 +1,55 @@
+       函数的定义
+def fun(a,b)   //其中有两个参数，不用限定类型
+    return a*b
+
+
+def fun(a,b=9)   //其中有一个提供了默认值
+    print(a,b)
+
+def fun(*arg)  //这里表示的是元组类型的，可以输入任意参数，用在不知道参数的个数
+    return arg
+
+def fun(**arg)  //表示的是一个字典类型的，调用的时候是fun(x=0,y=9,name="chenjiabing")
+    return arg
+
+输出的是字典类型的：{'x': 9, 'y': 8, 'name': 'chenjiabing'}
+
+
+def fun(*a,**r):  //可以混合使用，但是调用的时候必须要按照定义的顺序调用
+    print(a)
+    print(r)
+
+fun(1,2,3)
+fun(name="chenjiabng",y=9,t=9)
+fun(1,2,3,name="chenjiabng",x=9)//必须按照顺序调用
+
+输出：
+(1, 2, 3)
+{}
+()
+{'name': 'chenjiabng', 'y': 9, 't': 9}
+(1, 2, 3)
+{'name': 'chenjiabng', 'x': 9}
+
+
+lambda函数：主要适用函数体只有一行代码的
+如下：
+fun=lambda x,y:return x**y//返回是x的y次方
+fun=lambda x,y:print(x**y)//这是直接打印出来的
+其中lambda返回的是一个一个函数的名字可以直接用这个名字调用
+
+global:用于指定变量为全局变量，在函数体中声明
+a=4
+b=5
+def swap():
+    global a,b  //这里声明了变量是全局变量，那么在函数体中就可以改变其值
+    a,b=b,a
+swap()
+print(a,b)
+
+
+
+
+
+
+

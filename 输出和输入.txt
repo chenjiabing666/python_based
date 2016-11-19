@@ -1,0 +1,17 @@
+             输入和输出
+repr(obj)//用于输出字符的时候在两边添加单引号
+x.rjust(n,char)://用于在字符串的左边空出n个空格，如果填写了char参数，那么就是在空格的部分填充了char
+                //x.rjust(2)//x.rjust(2,"0"):以0填充空格
+
+x="chenjiabing"
+y="zhengyuanmei"
+print(x,y)  //这里输出的时候没有引号
+print(repr(x),repr(y))//这里的输出是有两个引号的
+print(x.rjust(2),y.just(2))
+
+
+
+x="xhen"
+y='99'
+print(x.zfill(6))  //会自动的在空出的部分填充0
+print(y.zfill(6))

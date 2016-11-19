@@ -1,0 +1,25 @@
+                            os函数   http://www.runoob.com/python3/python3-os-file-methods.html
+import os
+os.access(path,mode)//用来检测一个文件是否有可读，可写，可执行，是否存在的属性
+                     path:制定路径的文件名字
+                     os.F_OK: 作为access()的mode参数，测试path是否存在。
+                     os.R_OK: 包含在access()的mode参数中 ， 测试path是否可读。
+                     os.W_OK 包含在access()的mode参数中 ， 测试path是否可写。
+                     os.X_OK 包含在access()的mode参数中 ，测试path是否可执行。
+
+os.getcwd()://获得当前工作目录
+os.chdir(path)://将当前的工作目录改变为path
+os.chmod():用于更改文件湖目录的权限http://www.runoob.com/python3/python3-os-chmod.html
+os.chown()://更改文件所有者http://www.runoob.com/python3/python3-os-chown.html
+
+
+
+
+例子：import os
+i=os.access("file.txt",os.F_OK)
+print(i)
+print(os.access("file.txt",os.R_OK))
+print(os.access("file.txt",os.W_OK))
+print(os.access("file.txt",os.X_OK)
+
+                   

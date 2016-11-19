@@ -1,0 +1,23 @@
+        random函数
+
+choice(x)//x表示的是一个列表，元组，字符串，范围，其中返回的是这其中的任意一个数
+如下：
+print(random.choice(range(10)))
+print(random.choice([1,2,3,5,6]))
+print(random.choice("chenjiabing"))
+print(random.choice((1,2,3,4)))
+
+
+randrange(start,end,step)//这个函数是从start到end-1之间以递增基数为step的数列之中任选一个数
+                           其中可以有两个参数，一个参数，randrange(100):表示从从0-99之间任选一个数，randrange(0,100,2):表示在0-99,其中的数是
+                           2，4，6，8……（偶数）//这个函数得到的只能是整数
+
+
+random():随机生成的是0-1（不包括）的任意实数
+
+uniform(x,y):随机生成一个x-y之间	的任意一个浮点数//randrange(x,y,1)返回的是x-y之间的整数
+randint(x,y):用于随机生成x-y（包括）之间的任意一个整数
+shuffle(x):x表示一个列表，这个函数用于将一个列表打乱，将列表中的元素随机排序
+sample(list，n):随机获取指定长度的列表片段
+如下：list=[1,2,3,6,8,9,2]
+print(random.sample(list,4))

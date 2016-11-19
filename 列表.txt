@@ -1,0 +1,39 @@
+                    list 函数//列表
+list.append(x)//在列表的末尾添加元素
+list.extend(L)//将列表中的元素添加到列表list中
+list.insert(n,x)//将元素添加到列表中的指定位置
+list.pop(index)//删除指定位置的元素
+list.clear()//清空列表中的元素，但是列表仍然存在，只是为空
+list.index('x')//返回列表中第一个值为 x 的元素的索引。如果没有匹配的元素就会返回一个错误。
+list.count('x')//得到元素在x在列表中出现的次数
+list.sort()//对列表从小到大进行排序
+L=sorted(list)//将list排还序的赋值给L,但是list不会改变
+list.reverse()//对列表逆序输出
+list.remove(x)//删除列表中的指定元素x
+del list //删除列表，此时的列表已经不存在，必须重新定义
+del list[start:end]//删除指定索引范围的列表元素
+
+L=list.copy()//返回的是列表的复制
+
+
+
+列表的数据结构的使用：
+列表可以当作栈来使用，(先进后出)list.pop()  list.append()
+
+
+
+             列表推导式
+y=[a for a in x if a>3]
+z=[(a,b) for a in x if 3<a<66 for b in x if b>45]
+L=[round(344/55,i) for i in range(0,5)]
+
+
+//将3x4的列表转换成4X3的列表
+x=[[1,2,3,4],[3,4,5,6],[6,7,8,9]]
+L=[[row[i] for row in x] for i in range(0,4)]//列表推导式
+print(L)
+
+
+L=[[a,a**a] for a in x if a<4 ]
+z=[(a,b*b)for a in x if a>56 for b in x if b<56]
+
