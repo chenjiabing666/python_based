@@ -1,0 +1,115 @@
+#节点
+'''注意在类中调用类中的变量和函数一定要加上self,否则就是错误的'''
+class Node:
+    data=None
+    next=None
+    def __init__(self,a=0,b=None):   #初始化节点类型，数据初始化为0,
+        self.data=a
+        self.next=b
+
+class LLink:
+    head=None
+    tail=None
+    def __init__(self):
+        self.tail=self.head=Node()    #将头为节点申请为节点类型
+    def __del__(self):
+        p=self.head.next
+        self.head.next=None
+        while p:
+            htemp=p
+            p=p.next
+            del htemp
+
+    def append(self,a):   #a是新节点的数据
+        p=Node(a)
+        self.tail.next=p
+        self.tail=self.tail.next
+    def display(self):
+        p=Node()
+        p=self.head.next
+        while p!=None:    #当p不是空的时候
+            print(p.data,end=" ")
+            p=p.next
+
+    def insert_Node(self,i):
+        a=int(input("请输入你想要插入节点位置的数据："))
+        q=Node(i)   #新的节点
+        p=self.head.next
+
+        while p:
+            if p.data==a:
+                q.next=p.next
+                p.next=q
+            p=p.next
+    def delete_Node(self):
+        i=int(input("请输入你想要删除的数据位置："))
+        p=self.head.next
+        q=self.head
+        while p:
+            if p.data==i:
+                htemp=p
+                q.next=p.next
+            p=p.next
+            q=q.next
+        del htemp
+
+        '''头插法逆置'''
+    def reverse_Node(self):
+        p=self.head.next
+        self.head.next=None
+        while p:
+            pnext=p.next
+            p.next=self.head.next
+            self.head.next=p
+            p=pnext
+        '''将节点中的值赋给列表，然后将列表排序再替换给节点的数据'''
+    def sort_Node(self):
+        p=self.head.next
+        q=self.head.next
+        x=[]
+        while p:
+            x.append(p.data)
+            p=p.next
+        x.sort()
+        for i in x:
+            print(i,end=" ")
+        i=0
+        while q:
+            q.data=x[i]
+            i+=1
+            q=q.next
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a=LLink()
+for i in range(0,4):
+    j=int(input("input a Node data:"))
+    a.append(j)
+a.display()
+#a.insert_Node(99)
+#a.delete_Node()
+#a.reverse_Node()
+a.sort_Node()
+a.display()
+
+
+
