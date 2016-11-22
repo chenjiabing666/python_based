@@ -1,0 +1,4 @@
+python的字典创建方法：
+x={"name":"chenjiabing","age":99}
+x=dict([("name","chenjiabing"),("aeg",45)])
+x=dict(name="chenjiabing",sex="man",age=88)
