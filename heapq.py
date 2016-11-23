@@ -1,3 +1,13 @@
+'''heapq是python的一个模块，主要用于实现数据结构中的堆的实现，主要的函数如下：
+heappush(heap,items):向堆数组中添加一个元素
+heappop(heap):主要用于删除堆数组中的最小元素，并且返回最小值
+heapreplace(heap,items):主要的功能是先删除堆数组中的最小值，然后再添加items
+heappushpop(heap,items):主要的功能是先向其中添加一个items，然后删除其中的最小值
+heapify(heap):将列表转化成堆数组，用于数据结构中的堆操作
+nlargest(n,heap):返回的是数组heap中的最大的n个值
+nsmallest(n,heap):返回的是数组heap中的最小的n个值
+'''
+
 import heapq
 '''heapq是数据结构中的堆操作，主要的函数：
 heappush(heap,items):将items压入堆数组中
